@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View} from "react-native";
+import { StyleSheet, Text, View } from "react-native";
 
 export default function App() {
   return (
@@ -7,7 +7,7 @@ export default function App() {
         <Text>1</Text>
       </View>
       <View style={styles.two}>
-        <Text>2</Text>
+        <Text style={styles.colorOne}>2</Text>
       </View>
       <View style={styles.three}>
         <Text>3</Text>
@@ -19,16 +19,27 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     padding: 30,
-    flexDirection: 'row',
+    flexDirection: "column",
+    width: "80%",
+    height: 200,
   },
   one: {
     backgroundColor: "red",
+    flex: 1,
+
   },
   two: {
     backgroundColor: "blue",
+    flex: 1,
+    alignItems: 'flex-end'
+
   },
   three: {
-    backgroundColor: "green"
-  }
+    backgroundColor: "green",
+    flex: 1,
 
+  },
+  colorOne: {
+    color: "white",
+  },
 });
